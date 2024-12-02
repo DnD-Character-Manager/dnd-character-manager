@@ -19,16 +19,24 @@ def check_exit(user_input):
         print("Exiting the DnD Character Manager. Goodbye!")
         sys.exit()
 
+def load_characters():
+    print("Loading existing characters...")
+    # Add logic to load characters here
+
+def create_character():
+    print("Creating a new character...")
+    # Add logic to create a new character here
+
 def main_loop():
     while True:
         user_input = input("What would you like to do:\n1 - Load existing characters.\n2 - Create a new character.\n> ")
         check_exit(user_input)
         match user_input:
             case "1":
-                print("Loading existing characters...")
+                load_characters()
                 break
             case "2":
-                print("Creating a new character...")
+                create_character()
                 break
             case _:
                 print("Invalid input. Please enter '1' or '2'.")
